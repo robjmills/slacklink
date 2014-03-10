@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       crx: {
         myPublicPackage: {
           "src": "src/",
-          "dest": "dist/crx/",
+          "dest": "dist/crx/slacklink.crx",
           "exclude": [ ".git" ],
           "privateKey": "key.pem"
         }

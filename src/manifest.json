@@ -19,5 +19,6 @@
    "icons":{
       "48": "assets/images/slacklink.png"
    },
-   "manifest_version": 2
+   "manifest_version": 2,
+   "update_url": "https://github.com/robjmills/slacklink/raw/master/update-manifest.xml"
 }
