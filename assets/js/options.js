@@ -31,4 +31,7 @@ $( "#options-form" ).submit(function( event ) {
   localStorage.setItem('username', $('#username').val() );
   localStorage.setItem('emoji', $('#emoji').val() );
 
+  // show confirmation dialog and then hide it
+  $( "#alert" ).fadeIn('fast').delay(2000).fadeOut('fast');
+
 });

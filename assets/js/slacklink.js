@@ -13,8 +13,14 @@ chrome.browserAction.onClicked.addListener(function(){
 		var text = url;
 		var icon_emoji = localStorage.getItem('emoji');
 
+		// add hash to channel if it's not there
+		if (channel.substring(0, 1) != "#") {
+			channel = "#" + channel;
+		}
+
+		// payload for slack API request
 		var payload = {
-			channel: "#" + channel,
+			channel: channel,
 			username: username,
 			text: url,
 			icon_emoji: icon_emoji
