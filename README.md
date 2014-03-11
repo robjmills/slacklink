@@ -10,7 +10,7 @@ installation
 * download latest version of slacklink.crx [from here](https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx)
 * open your chrome extensions and drag .crx file into page
 * complete the slacklink options through either the extensions page or by right-clicking on the icon
-* post the latest meme direct to your slack account
+* post a link direct to your slack account from chrome by clicking the icon
 
 todo
 ========
