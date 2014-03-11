@@ -31,6 +31,9 @@ At the moment you won't be able to build this extension yourself without my priv
 Release History
 ========
 
+- 0.0.7 - Another attempt at forcing links to be expanded
+- 0.0.6 - Links should be expanded at Slack
+- 0.0.5 - Updated icon
 - 0.0.4 - New icon courtesy of Chris from [devteaminc.co](http://devteaminc.co)
 - 0.0.3 - Updated options page
 - 0.0.2 - Added autoupdate
