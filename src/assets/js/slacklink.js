@@ -24,7 +24,8 @@ chrome.browserAction.onClicked.addListener(function(){
             channel: channel,
             username: username,
             text: url,
-            icon_emoji: icon_emoji
+            icon_emoji: icon_emoji,
+            unfurl_links: true
         }
 
         $.ajax({
