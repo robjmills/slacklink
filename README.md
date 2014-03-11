@@ -21,3 +21,15 @@ a note on security
 ========
 
 This extension was created for fun (and because I had a hangover). It uses localstorage to store the details you're using including your incoming webhook API key. This means the security is only as safe as your chrome install - If you're concerned about this, don't use it :)
+
+contributing
+========
+
+At the moment you won't be able to build this extension yourself without my private key. Feel free to dig around in the source, and fork or whatever though really.
+
+
+Release History
+========
+
+0.0.2 - Added autoupdate
+0.0.1 - First release
