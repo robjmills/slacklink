@@ -1,7 +1,7 @@
 {
    "name": "Slacklink",
    "description": "Send currently open page URL to slack channel",
-   "version": "0.0.3",
+   "version": "0.0.4",
    "background": {
       "scripts": [
          "assets/js/slacklink.js",
@@ -13,12 +13,15 @@
    ],
    "options_page": "options.html",
    "browser_action": {
-      "default_icon": "assets/images/slacklink.png",
+      "default_icon": "assets/images/slacklink_128.png",
       "default_title": "Slack Link"
    },
    "icons":{
-      "48": "assets/images/slacklink.png"
+      "16": "assets/images/slacklink_16.png",
+      "48": "assets/images/slacklink_48.png",
+      "128": "assets/images/slacklink_128.png"
    },
+
    "manifest_version": 2,
    "update_url": "https://github.com/robjmills/slacklink/raw/master/update-manifest.xml"
 }
