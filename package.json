@@ -1,6 +1,6 @@
 {
   "name": "slacklink",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-crx": "~0.3.3"
