@@ -41,6 +41,9 @@ chrome.browserAction.onClicked.addListener(function(tab) {
       url: 'https://'+ domain +'/services/hooks/incoming-webhook?token='+apitoken,
       data: JSON.stringify(payload),
       dataType: 'json'
+    }).done(function() {
+      chrome.tabs.insertCSS(null, {file: "assets/css/alert.css"});
+      chrome.tabs.executeScript(null, {file: "assets/js/alert.js"});      
     });
   }
 });
