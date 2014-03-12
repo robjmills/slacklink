@@ -31,6 +31,7 @@ At the moment you won't be able to build this extension yourself without my priv
 Release History
 ========
 
+- 0.0.8 - Basic check for required fields added
 - 0.0.7 - Another attempt at forcing links to be expanded
 - 0.0.6 - Links should be expanded at Slack
 - 0.0.5 - Updated icon
