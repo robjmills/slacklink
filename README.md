@@ -14,7 +14,6 @@ installation
 
 todo
 ========
-* error handling for when configs haven't been added
 * add more info to README about setup
 
 a note on security
@@ -31,6 +30,7 @@ At the moment you won't be able to build this extension yourself without my priv
 Release History
 ========
 
+- 0.0.9 - Added simple visual feedback for successful posts [by m10l](https://github.com/m10l)
 - 0.0.8 - Basic check for required fields added
 - 0.0.7 - Another attempt at forcing links to be expanded
 - 0.0.6 - Links should be expanded at Slack
