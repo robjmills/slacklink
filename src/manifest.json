@@ -1,7 +1,7 @@
 {
    "name": "Slacklink",
    "description": "Send currently open page URL to slack channel",
-   "version": "0.0.10",
+   "version": "0.0.11",
    "background": {
       "scripts": [
          "assets/js/slacklink.js",
@@ -12,6 +12,7 @@
       "activeTab"
    ],
    "options_page": "options.html",
+   "web_accessible_resources": ["options.html"],
    "browser_action": {
       "default_icon": "assets/images/slacklink_128.png",
       "default_title": "Slack Link"

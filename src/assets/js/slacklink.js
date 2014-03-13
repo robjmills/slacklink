@@ -14,7 +14,7 @@ chrome.browserAction.onClicked.addListener( function ( tab ) {
 	
 	if ( !domain || !apitoken ) { // Required variables are missing so show alert
 
-		chrome.tabs.executeScript( tab.id, { code: 'alert(\'Required variables are missing in your options page\');'});
+		chrome.tabs.create({ url: chrome.extension.getURL("options.html#required") });
 		
 	} else { // all required variables are set   
 

@@ -1,6 +1,12 @@
 // get values from local storage (if set) and populate form fields
 $(function() {
   
+  // show errors in required form fields are empty
+  if ( window.location.hash == '#required' ) {
+    // validate form
+    validate();  
+  }
+
   var domain = localStorage.getItem('domain');
   if( domain ) $('#domain').val(domain);
 
@@ -30,8 +36,33 @@ $( "#options-form" ).submit(function( event ) {
   localStorage.setItem('channel', $('#channel').val() );
   localStorage.setItem('username', $('#username').val() );
   localStorage.setItem('emoji', $('#emoji').val() );
-
-  // show confirmation dialog and then hide it
-  $( "#alert" ).fadeIn('fast').delay(2000).fadeOut('fast');
+  
+  // validate form
+  validate();
 
 });
+
+// validate function
+function validate(){
+
+  // assume there are no errors
+  var errors = false;
+
+  // clear existing errors if there are any
+  $( "div.required").removeClass('has-error has-feedback');
+  
+  // check all required elements have values
+  $( "div.required input" ).each(function(  ) {
+    if ( $(this).val() == '' ){
+      errors = true;
+      $(this).parent().addClass('has-error has-feedback');
+    }
+  });
+
+  // show either error message or success message
+  if ( errors == true ) {
+    $('#error').fadeIn('fast').delay(2000).fadeOut('fast');
+  } else {
+    $( "#alert" ).fadeIn('fast').delay(2000).fadeOut('fast');
+  }
+}

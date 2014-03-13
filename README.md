@@ -30,6 +30,7 @@ At the moment you won't be able to build this extension yourself without my priv
 Release History
 ========
 
+- 0.0.11 - Show options page if required variables are missing
 - 0.0.10 - Refactored visual feedback [by m10l](https://github.com/m10l)
 - 0.0.9  - Added simple visual feedback for successful posts [by m10l](https://github.com/m10l)
 - 0.0.8  - Basic check for required fields added
