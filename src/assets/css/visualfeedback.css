@@ -1,0 +1,55 @@
+/**
+ * Nasty ID and Animation name used to help avoid conflicts
+ * (names are appended with MD5 hashes)
+ */
+
+/* Feedback Flash */
+
+#slackfeedbackFlash-fafe26266ec73804177c32940be7fac8 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+   background: #fff;
+  -webkit-animation: flash-a39401275d1b300aa789fb22aea4148a 200ms ease forwards;
+}
+
+/* Progress Bar */
+
+#slackprogressBar-d2f259380a8c94b1c58625ff2997080e {
+  width: 0%;
+  height: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: tomato;
+}
+
+.slack-progress-bar--start-ceac36a480298564f4fac58d64bc62c9 {
+  -webkit-animation: progressBarStart-6655d00a6985764dc871a224a164148d 2000ms ease forwards;
+}
+
+.slack-progress-bar--finish-2ecffe5697bf627bb6d1e05d7a6c51c8 {
+  -webkit-animation: progressBarFinish-40b4ab151a3ee5150a4d049b24201a76 200ms ease forwards!important;
+}
+
+/* Animations */
+
+@-webkit-keyframes flash-a39401275d1b300aa789fb22aea4148a {
+  0% { opacity: 0; }
+  25% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes progressBarStart-6655d00a6985764dc871a224a164148d {
+    0% { width: 0; }
+  100% { width: 33.333%; }
+}
+
+@-webkit-keyframes progressBarFinish-40b4ab151a3ee5150a4d049b24201a76 {
+    0% { width: 50%; }
+  100% { width: 100%; }
+}
