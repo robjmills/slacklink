@@ -41,6 +41,10 @@ chrome.browserAction.onClicked.addListener( function ( tab ) {
 			unfurl_links: 'true'
 		};
 
+		// Insert our visual feedback dependencies
+		chrome.tabs.insertCSS( null, { file: 'assets/css/visualfeedback.css' });
+		chrome.tabs.executeScript( null, { file: 'assets/js/visualfeedback.js' });
+
 		// make API request to slack
 		$.ajax({
 
@@ -48,11 +52,10 @@ chrome.browserAction.onClicked.addListener( function ( tab ) {
 			url: 'https://' + domain + '/services/hooks/incoming-webhook?token=' + apitoken,
 			data: JSON.stringify(payload)
 
-		}).done(function() {
+		}).always(function() {
 
-			// Add feedback when post is complete
-			chrome.tabs.insertCSS( null, { file: 'assets/css/alert.css' });
-			chrome.tabs.executeScript( null, { file: 'assets/js/alert.js' });
+			// Tidy up our visual feedback dependencies
+			chrome.tabs.executeScript( null, { file: 'assets/js/tidy.js' });
 
 		}).fail(function(){
 
