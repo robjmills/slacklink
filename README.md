@@ -10,7 +10,7 @@ https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx
 ````
 * open your chrome extensions
 ````
-Chrome -> Tools -> Extensions
+Settings -> Tools -> Extensions or chrome://extensions/
 ```` 
 * Drag `.crx` file into page and drop it
 * Complete the slacklink options through either the extensions page or by right-clicking on the icon - you **must** complete Domain and API Key
