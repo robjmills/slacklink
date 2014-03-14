@@ -1,33 +1,40 @@
-slacklink
+# Slacklink
 =========
 
-Post links to Slack from Chrome
+**Post links to Slack from Chrome**
 
-installation
+## Installation
 =========
 
-* Set up an incoming webhook on your Slack account and grab the API key
-* download latest version of slacklink.crx [from here](https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx)
-* open your chrome extensions and drag .crx file into page
-* complete the slacklink options through either the extensions page or by right-clicking on the icon
-* post a link direct to your slack account from chrome by clicking the icon
+* Set up an [incoming webhook](https://my.slack.com/services/new/incoming-webhook) on your Slack account and grab the API key
+* [download](https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx) latest version of slacklink.crx 
+````
+https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx
+````
+* open your chrome extensions
+````
+Chrome -> Tools -> Extensions
+```` 
+* Drag `.crx` file into page and drop it
+* Complete the slacklink options through either the extensions page or by right-clicking on the icon - you **must** complete Domain and API Key
+* You can now post a link direct to your chosen slack channel by clicking the slack icon
 
-todo
+## Todo
 ========
 * add more info to README about setup
 
-a note on security
+## A note on security
 ========
 
 This extension was created for fun (and because I had a hangover). It uses localstorage to store the details you're using including your incoming webhook API key. This means the security is only as safe as your chrome install - If you're concerned about this, don't use it :)
 
-contributing
+## Contributing
 ========
 
 At the moment you won't be able to build this extension yourself without my private key. Feel free to dig around in the source, and fork or whatever though really.
 
 
-Release History
+## Release History
 ========
 
 - 0.0.11 - Show options page if required variables are missing
