@@ -1,11 +1,8 @@
 # Slacklink
-=========
 
 **Post links to Slack from Chrome**
 
 ## Installation
-=========
-
 * Set up an [incoming webhook](https://my.slack.com/services/new/incoming-webhook) on your Slack account and grab the API key
 * [download](https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx) latest version of slacklink.crx 
 ````
@@ -20,23 +17,16 @@ Chrome -> Tools -> Extensions
 * You can now post a link direct to your chosen slack channel by clicking the slack icon
 
 ## Todo
-========
 * add more info to README about setup
 
 ## A note on security
-========
-
 This extension was created for fun (and because I had a hangover). It uses localstorage to store the details you're using including your incoming webhook API key. This means the security is only as safe as your chrome install - If you're concerned about this, don't use it :)
 
 ## Contributing
-========
-
 At the moment you won't be able to build this extension yourself without my private key. Feel free to dig around in the source, and fork or whatever though really.
 
 
 ## Release History
-========
-
 - 0.0.11 - Show options page if required variables are missing
 - 0.0.10 - Refactored visual feedback [by m10l](https://github.com/m10l)
 - 0.0.9  - Added simple visual feedback for successful posts [by m10l](https://github.com/m10l)
