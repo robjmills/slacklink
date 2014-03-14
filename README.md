@@ -20,7 +20,7 @@ Settings -> Tools -> Extensions or chrome://extensions/
 This extension was created for fun (and because I had a hangover). It uses localstorage to store the details you're using including your incoming webhook API key. This means the security is only as safe as your chrome install - If you're concerned about this, don't use it :)
 
 ## Contributing
-At the moment you won't be able to build this extension yourself without my private key. However, you can modify all code within the `src` directory and then load this into chrome://extensions/ using "Load Unpacked Extension". If you think you've made some useful feature or security updates then please send through a pull request.
+At the moment you won't be able to build this extension yourself without my private key. However, you can modify all code within the `src` directory and then load this into `chrome://extensions/` using *"Load Unpacked Extension"*. If you think you've made some useful feature or security updates then please send through a pull request.
 
 ## Release History
 - 0.0.11 - Show options page if required variables are missing
