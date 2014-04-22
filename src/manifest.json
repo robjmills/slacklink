@@ -4,18 +4,19 @@
    "version": "0.0.11",
    "background": {
       "scripts": [
-         "assets/js/slacklink.js",
          "assets/js/jquery-2.1.0.min.js"
       ]
    },
    "permissions": [
-      "activeTab"
+      "activeTab",
+      "tabs"
    ],
    "options_page": "options.html",
    "web_accessible_resources": ["options.html"],
    "browser_action": {
       "default_icon": "assets/images/slacklink_128.png",
-      "default_title": "Slack Link"
+      "default_title": "Slack Link",
+      "default_popup": "popup.html"
    },
    "icons":{
       "16": "assets/images/slacklink_16.png",
