@@ -1,18 +1,15 @@
 // slacklink.js - send current active URL to slack
 $( "#popup-form" ).submit(function( event ) {
 
-   console.log('called');
-
   // stop form submitting
   event.preventDefault();
 
-  //post();
+  // post link to slack
+  post();
 
 });
 
-function post()
-{
-	console.log('so was i');
+function post(){
 
 	chrome.tabs.query({
 		active: true  
@@ -49,13 +46,20 @@ function post()
 			var icon_emoji = localStorage.getItem('emoji');
 			icon_emoji = (icon_emoji) ? icon_emoji : ':slack:';
 
+			var posttext = $('#context').val();
+
 			// payload for slack API request
 			var payload = {
 				channel: channel,
 				username: username,
 				text: url,
 				icon_emoji: icon_emoji,
-				unfurl_links: 'true'
+				unfurl_links: 'true',
+				attachments: [
+					{
+						text: posttext
+					}
+				]
 			};
 
 			// Insert our visual feedback dependencies
