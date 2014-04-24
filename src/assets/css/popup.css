@@ -1,5 +1,12 @@
 body {
-  width:300px;
+  min-width:350px;
   padding:10px;
 }
-:focus { outline: none !important;  }
+
+#context{
+	width: 100%;
+}
+
+#popup-form .form-group {
+	margin-bottom: 10px !important;
+}

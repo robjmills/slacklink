@@ -46,20 +46,21 @@ function post(){
 			var icon_emoji = localStorage.getItem('emoji');
 			icon_emoji = (icon_emoji) ? icon_emoji : ':slack:';
 
-			var posttext = $('#context').val();
+			// do we need to add a comment to the URL
+			var postcontext = $('#context').val();
+			if( postcontext ){
+				posttext = ( postcontext + "\n" + url );
+			} else {
+				posttext = url;
+			}
 
 			// payload for slack API request
 			var payload = {
 				channel: channel,
 				username: username,
-				text: url,
+				text: posttext,
 				icon_emoji: icon_emoji,
-				unfurl_links: 'true',
-				attachments: [
-					{
-						text: posttext
-					}
-				]
+				unfurl_links: 'true'
 			};
 
 			// Insert our visual feedback dependencies
@@ -77,6 +78,9 @@ function post(){
 
 				// Tidy up our visual feedback dependencies
 				chrome.tabs.executeScript( null, { file: 'assets/js/tidy.js' });
+
+				// close popup
+				window.close();
 
 			}).fail(function(){
 
