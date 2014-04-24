@@ -4,6 +4,10 @@ $( "#popup-form" ).submit(function( event ) {
   // stop form submitting
   event.preventDefault();
 
+  // hide submit and show progress bar
+  $('#submit').hide();
+  $('#progress').show();
+
   // post link to slack
   post();
 
