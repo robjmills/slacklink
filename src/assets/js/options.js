@@ -3,8 +3,8 @@ $(function() {
   
   // show errors in required form fields are empty
   if ( window.location.hash == '#required' ) {
-    // validate form
-    validate();  
+	// validate form
+	validate();  
   }
 
   var domain = localStorage.getItem('domain');
@@ -53,16 +53,16 @@ function validate(){
   
   // check all required elements have values
   $( "div.required input" ).each(function(  ) {
-    if ( $(this).val() == '' ){
-      errors = true;
-      $(this).parent().addClass('has-error has-feedback');
-    }
+	if ( $(this).val() === '' ){
+	  errors = true;
+	  $(this).parent().addClass('has-error has-feedback');
+	}
   });
 
   // show either error message or success message
-  if ( errors == true ) {
-    $('#error').fadeIn('fast').delay(2000).fadeOut('fast');
+  if ( errors === true ) {
+	$('#error').fadeIn('fast').delay(2000).fadeOut('fast');
   } else {
-    $( "#alert" ).fadeIn('fast').delay(2000).fadeOut('fast');
+	$( "#alert" ).fadeIn('fast').delay(2000).fadeOut('fast');
   }
 }

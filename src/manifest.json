@@ -3,25 +3,25 @@
    "description": "Send currently open page URL to slack channel",
    "version": "0.0.11",
    "background": {
-      "scripts": [
-         "assets/js/jquery-2.1.0.min.js"
-      ]
+	  "scripts": [
+		 "assets/js/jquery-2.1.0.min.js"
+	  ]
    },
    "permissions": [
-      "activeTab",
-      "tabs"
+	  "activeTab",
+	  "tabs"
    ],
    "options_page": "options.html",
    "web_accessible_resources": ["options.html"],
    "browser_action": {
-      "default_icon": "assets/images/slacklink_128.png",
-      "default_title": "Slack Link",
-      "default_popup": "popup.html"
+	  "default_icon": "assets/images/slacklink_128.png",
+	  "default_title": "Slack Link",
+	  "default_popup": "popup.html"
    },
    "icons":{
-      "16": "assets/images/slacklink_16.png",
-      "48": "assets/images/slacklink_48.png",
-      "128": "assets/images/slacklink_128.png"
+	  "16": "assets/images/slacklink_16.png",
+	  "48": "assets/images/slacklink_48.png",
+	  "128": "assets/images/slacklink_128.png"
    },
 
    "manifest_version": 2,
