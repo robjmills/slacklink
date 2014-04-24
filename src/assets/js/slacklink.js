@@ -16,13 +16,12 @@ $( "#popup-form" ).submit(function( event ) {
 function post(){
 
 	chrome.tabs.query({
-		active: true  
+		active: true,
+		'lastFocusedWindow': true  
 	}, function(tabs) {
 
-		var tab = tabs[0];
-
 	    // active tab URL
-	    var url = tab.url;
+	    var url = tabs[0].url;
 		
 		// grab config values from local storage
 		
