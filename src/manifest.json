@@ -1,7 +1,7 @@
 {
    "name": "Slacklink",
    "description": "Send currently open page URL to slack channel",
-   "version": "0.0.11",
+   "version": "0.0.2",
    "background": {
 	  "scripts": [
 		 "assets/js/jquery-2.1.0.min.js"
