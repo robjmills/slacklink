@@ -1,15 +1,25 @@
 // slacklink.js - send current active URL to slack
 $( "#popup-form" ).submit(function( event ) {
 
-  // stop form submitting
-  event.preventDefault();
+	// stop form submitting
+	event.preventDefault();
 
-  // hide submit and show progress bar
-  $('#submit').hide();
-  $('#progress').show();
+	// hide submit and show progress bar
+	$('#submit').hide();
+	$('#progress').show();
 
-  // post link to slack
-  post();
+	// post link to slack
+	post();
+
+});
+
+// Submit form on Cmd + Enter or Ctrl + Enter
+
+$('#context').keydown( function ( event ) {
+
+	if ( ( event.ctrlKey || event.metaKey ) && event.keyCode == 13 ) {
+		$('#popup-form').submit();
+	}
 
 });
 
@@ -20,8 +30,8 @@ function post(){
 		'lastFocusedWindow': true  
 	}, function(tabs) {
 
-	    // active tab URL
-	    var url = tabs[0].url;
+		// active tab URL
+		var url = tabs[0].url;
 		
 		// grab config values from local storage
 		
