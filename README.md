@@ -23,6 +23,7 @@ This extension was created for fun (and because I had a hangover). It uses local
 At the moment you won't be able to build this extension yourself without my private key. However, you can modify all code within the `src` directory and then load this into `chrome://extensions/` using *"Load Unpacked Extension"*. If you think you've made some useful feature or security updates then please send through a pull request.
 
 ## Release History
+- 0.0.14 - Added ability to send form with keyboard [by m10l](https://github.com/m10l)
 - 0.0.13 - Fix to make sure active tab is sent
 - 0.0.12 - Launch popup on click so a comment can also be added to a link
 - 0.0.11 - Show options page if required variables are missing
