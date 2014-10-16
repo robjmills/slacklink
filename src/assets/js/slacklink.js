@@ -49,7 +49,7 @@ function post(){
 			var channel = localStorage.getItem('channel');
 			channel = (channel) ? channel : '#random';
 
-			if ( channel.substring(0, 1) !== '#' ) {
+			if ( channel.substring(0, 1) !== '#' && channel.substring(0, 1) !== '@'  ) {
 				channel = '#' + channel; // add hash to channel if it's not there
 			}
 
