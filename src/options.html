@@ -28,7 +28,7 @@
 							<input type="text" name="token" id="token" class="form-control input-lg" placeholder="apitoken123456">
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="domain">Channel/User</label>
+							<label class="control-label" for="domain">Default Channel/User</label>&nbsp;<em>(Your link will be posted here unless overwritten)</em>
 							<input type="text" name="channel" id="channel" class="form-control input-lg" placeholder="#random or @username">
 						</div>
 						<div class="form-group">
@@ -38,6 +38,15 @@
 						<div class="form-group">
 							<label class="control-label" for="domain">Emoji</label>
 							<input type="text" name="emoji" id="emoji" class="form-control input-lg" placeholder=":slack:">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="domain">Show channel override </label>&nbsp;<em>(adds ability to override default channel when you post)</em><br />
+							<label class="radio-inline">
+								<input type="radio" name="channel_override" id="channel_override_yes" value="yes"> Yes
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="channel_override" id="channel_override_no" value="no"> No
+							</label>
 						</div>
 						<div class="row">
 							<div class="col-xs-12">

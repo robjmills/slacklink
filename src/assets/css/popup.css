@@ -15,3 +15,11 @@ body {
 #popup-form .form-group {
 	margin-bottom: 10px !important;
 }
+
+#channel-col.col-xs-6{
+	padding-right: 5px;
+}
+
+#button-col.col-xs-6{
+	padding-left: 5px;
+}

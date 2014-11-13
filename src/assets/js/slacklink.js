@@ -23,6 +23,25 @@ $('#context').keydown( function ( event ) {
 
 });
 
+(function(){
+
+	'use strict';
+
+	if(localStorage.getItem('channel_override') === 'yes'){
+		$('#channel-col').show();
+		$('#button-col').addClass('col-xs-6').removeClass('col-xs-12');
+	} else {
+		$('#channel-col').hide();
+		$('#button-col').addClass('col-xs-12').removeClass('col-xs-6');
+		
+	}
+
+	$('#channel').attr("placeholder", localStorage.getItem('channel'));
+
+
+
+})();
+
 function post(){
 
 	chrome.tabs.query({
@@ -46,11 +65,19 @@ function post(){
 		} else { // all required variables are set   
 
 			// optional variables (will use default values if not set)
-			var channel = localStorage.getItem('channel');
+			
+			// get value of channel sent by input
+			var channel = $('#channel').val();
+
+			// if this was blank - set channel to value from localstorage
+			channel = (channel) ? channel : localStorage.getItem('channel');
+
+			// if channel is still empty - set to #random
 			channel = (channel) ? channel : '#random';
 
+			// add hash to channel if it's not there, unless it's being sent to a user like @user
 			if ( channel.substring(0, 1) !== '#' && channel.substring(0, 1) !== '@'  ) {
-				channel = '#' + channel; // add hash to channel if it's not there
+				channel = '#' + channel; 
 			}
 
 			var username = localStorage.getItem('username');

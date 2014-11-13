@@ -3,8 +3,8 @@ $(function() {
   
   // show errors in required form fields are empty
   if ( window.location.hash == '#required' ) {
-	// validate form
-	validate();  
+	 // validate form
+	 validate();  
   }
 
   var domain = localStorage.getItem('domain');
@@ -21,6 +21,15 @@ $(function() {
 
   var emoji = localStorage.getItem('emoji');
   if( emoji ) $('#emoji').val(emoji);
+
+  var channel_override = localStorage.getItem('channel_override');
+
+  // if channel isn't set then set to false
+  if( channel_override === null ){
+    $('#channel_override_no').prop('checked',true);
+  }else{
+    $('#channel_override_'+channel_override).prop('checked',true);
+  }  
   
 });
 
@@ -36,6 +45,7 @@ $( "#options-form" ).submit(function( event ) {
   localStorage.setItem('channel', $('#channel').val() );
   localStorage.setItem('username', $('#username').val() );
   localStorage.setItem('emoji', $('#emoji').val() );
+  localStorage.setItem('channel_override', $('input:radio[name=channel_override]:checked').val() );
   
   // validate form
   validate();
@@ -61,8 +71,8 @@ function validate(){
 
   // show either error message or success message
   if ( errors === true ) {
-	$('#error').fadeIn('fast').delay(2000).fadeOut('fast');
+	 $('#error').fadeIn('fast').delay(2000).fadeOut('fast');
   } else {
-	$( "#alert" ).fadeIn('fast').delay(2000).fadeOut('fast');
+	 $( "#alert" ).fadeIn('fast').delay(2000).fadeOut('fast');
   }
 }
