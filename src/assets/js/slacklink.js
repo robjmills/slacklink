@@ -111,7 +111,7 @@ function post(){
 			$.ajax({
 
 				type: 'POST',
-				url: 'https://' + domain + '/services/hooks/incoming-webhook?token=' + apitoken,
+				url: 'https://hooks.slack.com/services/' + apitoken,
 				data: JSON.stringify(payload)
 
 			}).always(function() {
