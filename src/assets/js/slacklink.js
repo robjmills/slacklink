@@ -33,7 +33,7 @@ $('#context').keydown( function ( event ) {
 	} else {
 		$('#channel-col').hide();
 		$('#button-col').addClass('col-xs-12').removeClass('col-xs-6');
-		
+
 	}
 
 	$('#channel').attr("placeholder", localStorage.getItem('channel'));
@@ -46,26 +46,26 @@ function post(){
 
 	chrome.tabs.query({
 		active: true,
-		'lastFocusedWindow': true  
+		'lastFocusedWindow': true
 	}, function(tabs) {
 
 		// active tab URL
 		var url = tabs[0].url;
-		
+
 		// grab config values from local storage
-		
+
 		// required variables
 		var domain = localStorage.getItem('domain');
 		var apitoken = localStorage.getItem('token');
-		
-		if ( !domain || !apitoken ) { // Required variables are missing so show alert
+
+		if ( !domain  ) { // Required variables are missing so show alert
 
 			chrome.tabs.create({ url: chrome.extension.getURL("options.html#required") });
-			
-		} else { // all required variables are set   
+
+		} else { // all required variables are set
 
 			// optional variables (will use default values if not set)
-			
+
 			// get value of channel sent by input
 			var channel = $('#channel').val();
 
@@ -77,7 +77,7 @@ function post(){
 
 			// add hash to channel if it's not there, unless it's being sent to a user like @user
 			if ( channel.substring(0, 1) !== '#' && channel.substring(0, 1) !== '@'  ) {
-				channel = '#' + channel; 
+				channel = '#' + channel;
 			}
 
 			var username = localStorage.getItem('username');
@@ -111,7 +111,7 @@ function post(){
 			$.ajax({
 
 				type: 'POST',
-				url: 'https://' + domain + '/services/hooks/incoming-webhook?token=' + apitoken,
+				url: domain,
 				data: JSON.stringify(payload)
 
 			}).always(function() {

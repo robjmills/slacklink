@@ -8,12 +8,13 @@
 	<form role="form" id="popup-form">
 		<fieldset>
 			<div class="form-group">
-				<textarea class="form-control" rows="3" name="context" id="context" placeholder="add an optional comment about your link here..."></textarea>
+			<!--	<textarea class="form-control" rows="3" name="context" id="context" placeholder="add an optional comment about your link here..."></textarea>-->
+				<input type="text" name="context" id="context" class="form-control" placeholder="">
 			</div>
-			
+
 			<div class="row">
 				<div class="col-xs-6" id="channel-col" style="display: none;">
-					<input type="text" name="token" id="channel" class="form-control" placeholder="">	
+					<input type="text" name="token" id="channel" class="form-control" placeholder="">
 				</div>
 				<div class="col-xs-6" id="button-col">
 					<input type="submit" class="btn btn-small btn-success btn-block" id="submit" value="Post link to slack">

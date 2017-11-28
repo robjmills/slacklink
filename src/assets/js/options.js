@@ -1,10 +1,10 @@
 // get values from local storage (if set) and populate form fields
 $(function() {
-  
+
   // show errors in required form fields are empty
   if ( window.location.hash == '#required' ) {
 	 // validate form
-	 validate();  
+	 validate();
   }
 
   var domain = localStorage.getItem('domain');
@@ -29,8 +29,8 @@ $(function() {
     $('#channel_override_no').prop('checked',true);
   }else{
     $('#channel_override_'+channel_override).prop('checked',true);
-  }  
-  
+  }
+
 });
 
 // store values in local storage on submit
@@ -46,7 +46,7 @@ $( "#options-form" ).submit(function( event ) {
   localStorage.setItem('username', $('#username').val() );
   localStorage.setItem('emoji', $('#emoji').val() );
   localStorage.setItem('channel_override', $('input:radio[name=channel_override]:checked').val() );
-  
+
   // validate form
   validate();
 
@@ -60,7 +60,7 @@ function validate(){
 
   // clear existing errors if there are any
   $( "div.required").removeClass('has-error has-feedback');
-  
+
   // check all required elements have values
   $( "div.required input" ).each(function(  ) {
 	if ( $(this).val() === '' ){
