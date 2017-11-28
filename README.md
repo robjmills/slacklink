@@ -4,14 +4,14 @@
 
 ## Installation
 * Set up an [incoming webhook](https://my.slack.com/services/new/incoming-webhook) on your Slack account and grab the API key
-* [download](https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx) latest version of slacklink.crx 
+* [download](https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx) latest version of slacklink.crx
 ````
 https://github.com/robjmills/slacklink/raw/master/dist/crx/slacklink.crx
 ````
 * open your chrome extensions
 ````
 Settings -> Tools -> Extensions or chrome://extensions/
-```` 
+````
 * Drag `.crx` file into page and drop it
 * Complete the slacklink options through either the extensions page or by right-clicking on the icon - you **must** complete Domain and API Key
 * You can now post a link direct to your chosen slack channel by clicking the slack icon
@@ -23,6 +23,7 @@ This extension was created for fun (and because I had a hangover). It uses local
 At the moment you won't be able to build this extension yourself without my private key. However, you can modify all code within the `src` directory and then load this into `chrome://extensions/` using *"Load Unpacked Extension"*. If you think you've made some useful feature or security updates then please send through a pull request.
 
 ## Release History
+- 0.0.17 - PR merged to update to new webhook structure
 - 0.0.16 - Added ability to override the default posting channel within the slacklink popup
 - 0.0.15 - Fixed ability to send to @username aswell as #channel
 - 0.0.14 - Added ability to send form with keyboard [by m10l](https://github.com/m10l)
